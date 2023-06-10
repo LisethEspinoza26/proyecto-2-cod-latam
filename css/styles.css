@@ -172,6 +172,60 @@ footer {
     color: #fbfbfb;
 }
 
+@media (min-width: 1024px){
+    section{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #inicio{
+        padding-top: 200px;
+        margin: 40px;
+        text-align: center;
+        align-items: center; 
+        padding-left: 30px;
+    }
+
+    h1{
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 32px;
+    }
+
+    figure {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+
+    article{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .inicio{
+        text-align: justify;
+    }
+
+    .color{
+        align-items: center;
+    }
+
+    img.presentacion {
+        height: 400px;
+    }
+
+    ul{
+        padding-top: 40px;
+        padding-bottom: 70px;
+    }
+}
+
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
 *    "estilos generales". Una buena idea sería comenzar por el <body> ;)
