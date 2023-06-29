@@ -64,6 +64,14 @@ header {
     margin-left: 15px;
 }
 
+#btn-dark {
+   display: inline-block;
+   padding: 5px;
+   width: 40px;
+   height: 25px;
+   border-radius: 50px;
+}
+
 img {
     max-width: 100%;
 }
@@ -102,11 +110,13 @@ ul.menu {
 }
 
 li.item-menu a {
-    padding: 16px;
+    padding: 10px;
     display: inline-block;
 }
 
-li.item-menu:hover {
+li.item-menu:hover,
+li.item-menu a.active,
+.alinear-iconos:hover {
     background: rgba(121, 227, 239, 0.3);
     transition: background-color 0.4s;
 }
@@ -157,10 +167,22 @@ ul.iconos {
     margin: 20px;
 }
 
-.alinear-iconos:hover {
-    background: rgba(121, 227, 239, 0.3);
+a.boton:hover {
+    background: rgba(54, 249, 242, 0.792);
     transition: background-color 0.4s;
+    color: #0f0f0f;
+    font-style: italic;
+    font-weight: bold;
 }
+
+/* .color_icon {
+    background-color: beige;
+}
+
+.modo_oscuro {
+    background-color: #0f0f0f;
+    color: #fbfbfb;
+} */
 
 footer {
     background-color:#3b6d6c;
