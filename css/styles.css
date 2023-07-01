@@ -59,17 +59,58 @@ header {
     background-color: #fbfbfb;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
 .logo {
-    width: 110px;
+    width: 100px;
     margin-left: 15px;
 }
 
-#btn-dark {
-   display: inline-block;
-   padding: 5px;
-   width: 40px;
-   height: 25px;
-   border-radius: 50px;
+.switch {
+    background: #343d5B;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    margin-right: 5px;
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: #fbfbfb;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0,.2);
+    }
+}
+/* Coloque esta clase para cuando se hace click cobre el botón para que cambie de color y se mueva pero no me esta funcionando, no se cual es el error */
+&.on {
+    background: orange;
+    color: #0f0f0f;
+    &::after {
+        right: 0;
+        left: unset;
+    }
+}
+
+span {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    background: none;
+    color: #fbfbfb;
 }
 
 img {
@@ -84,6 +125,7 @@ figure {
 img.presentacion {
     width: 400px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 h1 {
@@ -101,7 +143,7 @@ h1,h2 {
 }
 
 #inicio {
-    padding-top: 100px 30px 0 30px;
+    padding: 100px 30px 0 30px;
 }
 
 ul.menu {
@@ -122,7 +164,7 @@ li.item-menu a.active,
 }
 
 #contacto {
-    padding-top: 250px 30px 0 30px;
+    padding: 250px 30px 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -175,14 +217,35 @@ a.boton:hover {
     font-weight: bold;
 }
 
-/* .color_icon {
+.color_icon {
     background-color: beige;
 }
 
-.modo_oscuro {
+.dark {
     background-color: #0f0f0f;
-    color: #fbfbfb;
-} */
+    color: beige;
+    transition: .3s ease all;
+}
+
+body.dark header {
+    background: #222222;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+body.dark footer {
+    background: #222222;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+&.active {
+    background: orange;
+    color: #0f0f0f;
+    &::after {
+        right: 0;
+        left: unset;
+    }
+}
+
 
 footer {
     background-color:#3b6d6c;

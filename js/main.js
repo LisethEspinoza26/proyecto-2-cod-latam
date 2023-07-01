@@ -11,12 +11,12 @@ menuItems.forEach(function (item) {
 
 const body = document.querySelector ("body");
 const iconos = document.querySelectorAll (".alinear-iconos");
-
 const boton = document.querySelector ("#btn-dark");
 
 boton.addEventListener("click", function (e) {
-    body.classList.toggle ("modo oscuro");
+    boton.classList.toggle ("on");
+    body.classList.toggle ("dark");
     iconos.forEach(function (icono) {
-        icono.classList.toggle ("color-icon");
+        icono.classList.add ("color_icon");
     });
 });
