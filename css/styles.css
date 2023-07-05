@@ -65,6 +65,35 @@ nav {
     padding: 20px;
 }
 
+/* para hacer el menu hamburguesa */
+/* nav {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.nav {
+    display: none;
+    position: absolute;
+    gap: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    padding: 2rem;
+}
+
+.abrir-menu {
+    display:block;
+}
+
+.cerrar-menu {
+    display:none;
+} */
+
 .logo {
     width: 100px;
     margin-left: 15px;
@@ -78,39 +107,41 @@ nav {
     cursor: pointer;
     display: flex;
     outline: none;
-    margin-right: 5px;
-    &::after {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        background: #fbfbfb;
-        top: 0;
-        left: 0;
-        right: unset;
-        border-radius: 100px;
-        transition: .3s ease all;
-        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0,.2);
-    }
-}
-/* Coloque esta clase para cuando se hace click cobre el botón para que cambie de color y se mueva pero no me esta funcionando, no se cual es el error */
-&.on {
-    background: orange;
-    color: #0f0f0f;
-    &::after {
-        right: 0;
-        left: unset;
-    }
+    margin-left: 5px;
 }
 
-span {
+.switch::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #fbfbfb;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0,.2);
+}
+
+.switch span {
     width: 20px;
     height: 20px;
     line-height: 20px;
     display: block;
     background: none;
     color: #fbfbfb;
+}
+
+.switch.active {
+    background-color: orange;
+    color: #0f0f0f;
+}
+
+.switch.active::after {
+    right: 0;
+    left: unset;
 }
 
 img {
@@ -126,6 +157,14 @@ img.presentacion {
     width: 400px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+img.presentacion:hover,
+.logo:hover {
+    transform: scale(1.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.70);
+    border-radius: 3px;
+    transition: all .3s ease;
 }
 
 h1 {
@@ -161,6 +200,17 @@ li.item-menu a.active,
 .alinear-iconos:hover {
     background: rgba(121, 227, 239, 0.3);
     transition: background-color 0.4s;
+}
+
+li.item-menu:hover {
+    font-style: italic;
+    font-weight: bold;
+    color:rgba(19, 39, 142, 0.792);
+}
+
+.alinear-iconos:hover,
+button:hover {
+    transform: scale(1.5);
 }
 
 #contacto {
@@ -215,6 +265,10 @@ a.boton:hover {
     color: #0f0f0f;
     font-style: italic;
     font-weight: bold;
+    transform: scale(1.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.70);
+    border-radius: 3px;
+    transition: all .3s ease;
 }
 
 .color_icon {
@@ -246,7 +300,6 @@ body.dark footer {
     }
 }
 
-
 footer {
     background-color:#3b6d6c;
     height: 90px;
@@ -258,6 +311,14 @@ footer {
 }
 
 @media (min-width: 1024px){
+   /*  menu hamburguesa */
+   /*  .abrir-menu,nav {
+        display:none;
+    }
+    .cerrar-menu {
+        display:block;
+    } */
+
     section{
         display: flex;
         flex-direction: row;
@@ -305,7 +366,7 @@ footer {
         height: 400px;
     }
 
-    ul{
+    ul.iconos {
         padding-top: 40px;
         padding-bottom: 70px;
     }
