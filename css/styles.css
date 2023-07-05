@@ -66,14 +66,6 @@ nav {
 }
 
 /* para hacer el menu hamburguesa */
-/* nav {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
 
 .nav {
     display: none;
@@ -92,7 +84,7 @@ nav {
 
 .cerrar-menu {
     display:none;
-} */
+}
 
 .logo {
     width: 100px;
@@ -291,15 +283,6 @@ body.dark footer {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
-&.active {
-    background: orange;
-    color: #0f0f0f;
-    &::after {
-        right: 0;
-        left: unset;
-    }
-}
-
 footer {
     background-color:#3b6d6c;
     height: 90px;
@@ -312,12 +295,13 @@ footer {
 
 @media (min-width: 1024px){
    /*  menu hamburguesa */
-   /*  .abrir-menu,nav {
+    .abrir-menu,nav {
         display:none;
     }
+    
     .cerrar-menu {
         display:block;
-    } */
+    }
 
     section{
         display: flex;
