@@ -56,34 +56,7 @@ header {
     top: 0;
     left: 0;
     box-shadow: 0 3px 10px -5px #5f5f5f;
-    background-color: #fbfbfb;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-/* para hacer el menu hamburguesa */
-
-.nav {
-    display: none;
-    position: absolute;
-    gap: 1rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black;
-    padding: 2rem;
-}
-
-.abrir-menu {
-    display:block;
-}
-
-.cerrar-menu {
-    display:none;
+    background-color:#3b6d6c;
 }
 
 .logo {
@@ -177,14 +150,10 @@ h1,h2 {
     padding: 100px 30px 0 30px;
 }
 
-ul.menu {
- display: flex;
- font-size: 20px;
-}
-
 li.item-menu a {
     padding: 10px;
     display: inline-block;
+    color: beige;
 }
 
 li.item-menu:hover,
@@ -194,10 +163,10 @@ li.item-menu a.active,
     transition: background-color 0.4s;
 }
 
-li.item-menu:hover {
+li.item-menu a:hover {
     font-style: italic;
     font-weight: bold;
-    color:rgba(19, 39, 142, 0.792);
+    color: rgb(170, 219, 239);
 }
 
 .alinear-iconos:hover,
@@ -293,16 +262,75 @@ footer {
     color: #fbfbfb;
 }
 
-@media (min-width: 1024px){
-   /*  menu hamburguesa */
-    .abrir-menu,nav {
-        display:none;
-    }
-    
-    .cerrar-menu {
-        display:block;
+ /* para hacer el menu hamburguesa */
+
+@media screen and (max-width:550px) {
+   .abrir-menu,
+   .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.50rem;
+        background-color: transparent;
+        color: #fbfbfb;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
     }
 
+    #btn-dark{
+       width: 40px;
+       height: 20px;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top:0;
+        right: 0;
+        padding-bottom: 0%;
+        background-color: #3b6d6c;
+        padding: 2rem;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .menu li a,
+    #cerrar {
+    color: beige;
+    }
+}
+
+@media screen and (min-width: 551px) {
+    nav {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    ul.menu {
+        display: flex;
+        font-size: 20px;
+       }
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: none;
+}
+}
+
+@media (min-width: 1024px){
     section{
         display: flex;
         flex-direction: row;
@@ -354,6 +382,13 @@ footer {
         padding-top: 40px;
         padding-bottom: 70px;
     }
+
+      /*  menu hamburguesa */
+   
+   .abrir-menu,
+   .cerrar-menu {
+    display: none;
+}
 }
 
 /* Recomendaciones! 

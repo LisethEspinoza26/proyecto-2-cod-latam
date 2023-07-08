@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Logo Liseth.png" type="image/x-icon">
     <title>Liseth Coromoto Espinoza Chacón</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--  CSS -->
@@ -12,9 +13,11 @@
 <body>
     <header>
         <img class= "logo" src="img/Logo Liseth.png" alt="logo Liseth">
-        <button class="abrir-menu">Abrir</button>
-        <nav class="nav">
-            <button class="cerrar-menu">Cerrar</button>
+        <button id="abrir" class="abrir-menu"><i class="fa-solid fa-bars fa-bounce"></i>
+        </button>
+        <nav id="nav" class="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="fa-solid fa-xmark fa-beat"></i>
+            </button>
             <ul class="menu">
                 <li class="item-menu">
                     <a href="#inicio" class="active">Inicio</a>
@@ -26,7 +29,7 @@
             <button class="switch" id="btn-dark">
                 <span><i class="fas fa-sun"></i></span>
                 <span><i class="fas fa-moon"></i></span>
-        </button>
+            </button>
         </nav>
     </header>
 
