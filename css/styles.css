@@ -38,12 +38,15 @@ main {
 
 body {
     font-family:'Lato', sans-serif;
-    /* background-color:#fbfbfb; */
+    background-color:#fbfbfb;
+    background-image: url(https://img.freepik.com/foto-gratis/fondo-navidad-diseno-estrellas-luces-bokeh-pastel_1048-13478.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    visibility: visible;
     font-size: 18px;
     line-height: 1.2;
     color: #0f0f0f;
     max-width: 100%;
-    background-image: url(img/estrellas.jpg);
 }
 
 header {
@@ -238,7 +241,7 @@ a.boton:hover {
 }
 
 .dark {
-    background-color: #0f0f0f;
+    background: #0f0f0f;
     color: beige;
     transition: .3s ease all;
 }
@@ -253,79 +256,66 @@ body.dark footer {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
-/* footer {
-    background-color:#3b6d6c;
-    height: 90px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fbfbfb;
-} */
-
 footer {
-    /* height: 90px; */
-    width: 100%;
-    min-height: 100px;
     position: relative;
-    background-color: #3b6d6c;
-    padding: 20px 50px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-    z-index: 1; */
+    width: 100%;
+    height: 90px;
+    background: #3586ff;
+    min-height: 100px;
+    padding: 20 px 40px;
 }
 
 footer p {
     color: #fbfbfb;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 15px;
     margin-bottom: 10px;
-    font-size: 1em;
+    padding-top: 40px;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-.ondas .onda {
+footer .ola {
     position: absolute;
     top: -100px;
     left: 0;
     width: 100%;
     height: 100px;
-    background: url(img\wave.png);
+    background: url(../img/wave.png);
     background-size: 1000px 100px;
 }
 
-.ondas .onda#onda1 {
+footer .ola#ola1 {
     z-index: 1000;
     opacity: 1;
     bottom: 0;
-    animation: animacionOnda 4s linear infinite;
+    animation: animacionOla 4s linear infinite;
 }
 
-.ondas .onda#onda2 {
+.olas .ola#ola2 {
     z-index: 999;
     opacity: 0.5;
     bottom: 10px;
-    animation: animacionOnda_2 4s linear infinite;
+    animation: animacionOla_2 4s linear infinite;
 }
 
-.ondas .onda#onda3 {
+.olas .ola#ola3 {
     z-index: 1000;
     opacity: 0.2;
     bottom: 15px;
-    animation: animacionOnda 3s linear infinite;
+    animation: animacionOla 3s linear infinite;
 }
 
-.ondas .onda#onda4 {
+.olas .ola#ola4 {
     z-index: 999;
     opacity: 0.7;
     bottom: 20px;
-    animation: animacionOnda_2 3s linear infinite;
+    animation: animacionOla_2 3s linear infinite;
 }
 
-@keyframes animacionOnda {
+@keyframes animacionOla {
     0%{
         background-position-x: 1000px;
     }
@@ -334,7 +324,7 @@ footer p {
     }
 }
 
-@keyframes animacionOnda_2 {
+@keyframes animacionOla_2 {
     0%{
         background-position-x: 0px;
     }
