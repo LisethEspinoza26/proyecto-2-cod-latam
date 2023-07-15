@@ -42,7 +42,6 @@ body {
     background-image: url(https://img.freepik.com/foto-gratis/fondo-navidad-diseno-estrellas-luces-bokeh-pastel_1048-13478.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    visibility: visible;
     font-size: 18px;
     line-height: 1.2;
     color: #0f0f0f;
@@ -163,14 +162,14 @@ li.item-menu a {
 li.item-menu:hover,
 li.item-menu a.active,
 .alinear-iconos:hover {
-    background: rgba(121, 227, 239, 0.3);
+    background:rgba(9, 220, 243, 0.3);
     transition: background-color 0.4s;
 }
 
 li.item-menu a:hover {
     font-style: italic;
     font-weight: bold;
-    color: rgb(170, 219, 239);
+    color: rgb(5, 5, 5);
 }
 
 .alinear-iconos:hover,
@@ -209,7 +208,7 @@ a.boton {
 }
 
 article.color {
-    background-color: rgba(121, 227, 239, 0.3);
+    background-color: rgba(9, 220, 243, 0.3);
     border-radius: 10px;
     padding: 20px;
 }
